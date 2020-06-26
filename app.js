@@ -1,3 +1,5 @@
+import { add, subtract, multiply, divide } from '../util.js';
+
 // get dom elements
 // get add-input-1
 const addInput1 = document.getElementById('add-input-1');
@@ -20,7 +22,7 @@ boogerButton.addEventListener('click', () => {
     const value2 = addInput2.value;
 
     // add the two values together
-    const sum = Number(value1) + Number(value2);
+    const sum = add(value1, value2);
 
     // update the textContent of the span
     boogerSpan.textContent = sum;
@@ -41,7 +43,7 @@ const noseSpan = document.getElementById('subtract-result');
 noseButton.addEventListener('click', () => {
     const value3 = subtractInput3.value;
     const value4 = subtractInput4.value;
-    const outcome = Number(value3) - Number(value4);
+    const outcome = subtract(value3, value4);
     noseSpan.textContent = outcome;
 });
 
@@ -60,7 +62,7 @@ const fingerSpan = document.getElementById('multiply-result');
 fingerButton.addEventListener('click', () => {
     const value5 = multiplyInput5.value;
     const value6 = multiplyInput6.value;
-    const result = Number(value5) * Number(value6);
+    const result = multiply(value5, value6);
     fingerSpan.textContent = result;
 });
 
@@ -73,7 +75,7 @@ const earSpan = document.getElementById('divide-result');
 earButton.addEventListener('click', () => {
     const value7 = divideInput1.value;
     const value8 = divideInput2.value;
-    const outcome = Number(value7) / Number(value8);
+    const outcome = divide(value7, value8);
     earSpan.textContent = outcome;
 });
 
